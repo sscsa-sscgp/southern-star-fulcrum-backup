@@ -1,0 +1,14 @@
+requests>=2.31
+PyYAML>=6.0
+
+# SFTP client. paramiko pulls in cryptography, bcrypt and pynacl; all ship
+# wheels for Python 3.11 on Windows and Linux.
+paramiko>=3.4
+
+# Timezone data for zoneinfo. Cycle and file names use Central time, and
+# Windows has no system timezone database, so without this
+# ZoneInfo("America/Chicago") fails there. Pure Python.
+tzdata>=2024.1
+
+# Test-only (not needed on the server):
+#   pytest>=8.0
